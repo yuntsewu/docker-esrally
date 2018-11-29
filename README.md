@@ -8,14 +8,14 @@
 
 At the root of this repository:
 ```
-docker build -t so0k/es-rally .
-docker push so0k/es-rally
+docker build -t es-rally .
+docker push es-rally
 ```
 
 1. Run esrally container in kubernetes:
 
 ```
-kubectl run -it --generator "run-pod/v1" esrally --image so0k/es-rally -- /bin/sh
+kubectl run -it --generator "run-pod/v1" esrally --image es-rally -- /bin/sh
 ```
 
 1. start benchmark agains es-cluster (from the attached terminal)
